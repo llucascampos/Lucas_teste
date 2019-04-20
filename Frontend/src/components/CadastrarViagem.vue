@@ -14,7 +14,7 @@
         </v-layout>
 
         <v-layout align-center justify-center>
-            <v-btn color="primary" dark @click.stop="dialog = true">
+            <v-btn color="primary" dark @click.stop="dialog = true " data-v-step="2" >
                 Cadastrar Nova Corrida
             </v-btn>
         </v-layout>
@@ -96,13 +96,16 @@
                 </v-form>
             </v-stepper>
         </v-dialog>
+      <v-tour name="myTour" :steps="steps" :options="myOption" :callbacks="myCallbacks"></v-tour>
     </div>
 </template>
 
 <script>
 import axios from 'axios'
 var urlPadrao = 'http://localhost:8081'
+import VueTour from '../mixins/VueTour.js'
 export default {
+   mixins: [VueTour],
     data () {
       return {
         dialog: false,

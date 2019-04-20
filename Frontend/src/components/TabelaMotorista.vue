@@ -35,8 +35,19 @@
     <v-toolbar>
       <v-toolbar-title>Motoristas</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn fab dark color="green" @click="inicializando()" small> <v-icon dark>replay</v-icon></v-btn>
-      <v-btn fab dark color="primary" @click="dialog = true" small> <v-icon dark>add</v-icon></v-btn>
+      <v-tooltip top>
+        <template v-slot:activator="{ on }">
+          <v-btn v-on="on" fab dark color="green" @click="inicializando()" small> <v-icon dark>replay</v-icon></v-btn>
+        </template>
+        <span>Atualizar página</span>
+      </v-tooltip>
+
+      <v-tooltip top>
+        <template v-slot:activator="{ on }">
+          <v-btn v-on="on" fab dark color="primary" @click="dialog = true" small> <v-icon dark>add</v-icon></v-btn>
+        </template>
+        <span>Adicionar novo motorista</span>
+      </v-tooltip>
     </v-toolbar>
 
      <v-dialog v-model="dialog" max-width="70%"  persistent>
@@ -101,11 +112,15 @@
           <td class="text-xs-left">{{ props.item.sexo }}</td>
           <td class="text-xs-left">{{ formatarStatus(props.item.ativo) }}</td>
           <td class="justify-center layout px-0">
-            <v-icon  class="mr-2" @click="editarItem(props.item)">edit</v-icon>
+             <v-tooltip top>
+              <template v-slot:activator="{ on }">
+                <v-icon  class="mr-2" @click="editarItem(props.item)">edit</v-icon>
+              </template>
+              <span>Editar</span>
+            </v-tooltip>
           </td>
         </template>
       </v-data-table>
-      
   </div>
 </template>
 

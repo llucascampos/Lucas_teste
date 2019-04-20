@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "production": "pm2 start index.js --name  lucas-teste-backend"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "mysql": "^2.16.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "pm2": "^3.5.0"
   }
 }

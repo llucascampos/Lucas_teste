@@ -34,7 +34,7 @@
                                             item-text="nome"
                                             label="Motorista"
                                             :rules="obrigatorio"
-                                            no-data-text="Não a motoristas cadastrados"
+                                            no-data-text="Não há motoristas cadastrados"
                                             append-icon="airline_seat_recline_extra"
                                             return-object
                                         ></v-autocomplete>
@@ -56,7 +56,7 @@
                                             item-text="nome"
                                             label="Passageiro"
                                             :rules="obrigatorio"
-                                            no-data-text="Não a passageiros cadastrados"
+                                            no-data-text="Não há passageiros cadastrados"
                                             append-icon="perm_identity"
                                             return-object
                                         ></v-autocomplete>

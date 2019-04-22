@@ -37,7 +37,7 @@ router.put('/', function(req, res){
 
 router.get('/filtrar/:filtrarPor/:filtro', function(req, res) {
     let filtrarPor = req.params.filtrarPor
-    if(filtrarPor == 'modelo do carro'){ 
+    if(filtrarPor == 'Modelo do Carro'){ 
         filtrarPor = 'modeloCarro'
     }
     let filtro = req.params.filtro

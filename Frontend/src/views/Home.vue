@@ -8,7 +8,7 @@
                 </v-flex>
             </v-layout>
         </div>
-        <v-tour name="myTour" :steps="steps" :options="myOption" :callbacks="myCallbacks"></v-tour>
+        <v-tour name="myTour" :steps="steps" :options="myOption"></v-tour>
     </v-container>
 </template>
 

@@ -10,7 +10,7 @@
         <v-btn flat to="/Corridas"  data-v-step="5">Corridas</v-btn>
       </v-toolbar-items>
     </v-toolbar>
- <v-tour name="myTour" :steps="steps" :options="myOption" :callbacks="myCallbacks"></v-tour>
+ <v-tour name="myTour" :steps="steps" :options="myOption"></v-tour>
   </div>
 </template>
 

@@ -1,0 +1,36 @@
+runtime: php55
+api_version: 1
+threadsafe: true
+
+default_expiration: "5m"
+
+handlers:
+- url: /(.*\.(appcache|manifest))
+mime_type: text/cache-manifest
+static_files: \1
+upload: (.*\.(appcache|manifest))
+expiration: "0m"
+
+- url: /(.*\.css)
+mime_type: text/css
+static_files: \1
+upload: (.*\.css)
+
+- url: /img/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+static_files: img/\1
+upload: img/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+
+- url: /js/(.*\.js)
+mime_type: text/javascript
+static_files: js/\1
+upload: js/(.*\.js)
+
+- url: /
+static_files: index.html
+upload: index.html
+expiration: "1m"
+
+- url: /(.*)
+static_files: index.html
+upload: index.html
+expiration: "1m"

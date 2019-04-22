@@ -127,7 +127,7 @@
 <script>
 import axios from 'axios'
 import FuncoesCompartilhadas from '../mixins/FuncoesCompartilhadas.js'
-var urlPadrao = 'http://localhost:8081'
+var urlPadrao = 'https://backend-dot-lucas-teste-238218.appspot.com/'
 export default {
   mixins: [FuncoesCompartilhadas],
    data: () => ({

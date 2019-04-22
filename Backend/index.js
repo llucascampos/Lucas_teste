@@ -17,5 +17,11 @@ app.use('/motoristas', apiMotoristas)
 app.use('/passageiros', apiPassageiros)
 app.use('/corridas', apiCorridas)
   
-app.listen(8081)
-console.log('Servidor ok')
+
+const PORT = process.env.PORT || 8081;
+
+app.listen(PORT, function () {
+console.log(`Server listening on port ${PORT}...`);
+});
+
+module.exports = app;

@@ -102,7 +102,7 @@
 
 <script>
 import axios from 'axios'
-var urlPadrao = 'http://localhost:8081'
+var urlPadrao = 'https://backend-dot-lucas-teste-238218.appspot.com/'
 import VueTour from '../mixins/VueTour.js'
 export default {
    mixins: [VueTour],

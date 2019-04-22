@@ -1,0 +1,1 @@
+.v-dialog:not(.v-dialog--fullscreen){max-width:70%}@media screen and (max-width:600px){.v-dialog:not(.v-dialog--fullscreen){max-width:100%}}

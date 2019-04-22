@@ -1,36 +1,42 @@
 runtime: php55
 api_version: 1
 threadsafe: true
+service: default
 
 default_expiration: "5m"
 
 handlers:
-- url: /(.*\.(appcache|manifest))
-mime_type: text/cache-manifest
-static_files: \1
-upload: (.*\.(appcache|manifest))
-expiration: "0m"
+  - url: /(.*\.(appcache|manifest))
+    mime_type: text/cache-manifest
+    static_files: \1
+    upload: (.*\.(appcache|manifest))
+    expiration: "0m"
 
-- url: /(.*\.css)
-mime_type: text/css
-static_files: \1
-upload: (.*\.css)
+  - url: /(.*\.css)
+    mime_type: text/css
+    static_files: \1
+    upload: (.*\.css)
 
-- url: /img/(.*\.(bmp|gif|ico|jpeg|jpg|png))
-static_files: img/\1
-upload: img/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  - url: /statics/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+    static_files: statics/\1
+    upload: statics/(.*\.(bmp|gif|ico|jpeg|jpg|png))
 
-- url: /js/(.*\.js)
-mime_type: text/javascript
-static_files: js/\1
-upload: js/(.*\.js)
+  - url: /fonts/(.*\.woff)
+    mime_type: application/x-font-woff
+    static_files: fonts/\1
+    upload: fonts/(.*\.woff)
 
-- url: /
-static_files: index.html
-upload: index.html
-expiration: "1m"
+  - url: /js/(.*\.js)
+    mime_type: text/javascript
+    static_files: js/\1
+    upload: js/(.*\.js)
 
-- url: /(.*)
-static_files: index.html
-upload: index.html
-expiration: "1m"
+  - url: /
+    static_files: index.html
+    upload: index.html
+    expiration: "1m"
+
+  - url: /(.*)
+    static_files: index.html
+    upload: index.html
+    expiration: "1m"
